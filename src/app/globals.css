@@ -1,130 +1,399 @@
 @import "tailwindcss";
-@import "tw-animate-css";
-@import "shadcn/tailwind.css";
 
-@custom-variant dark (&:is(.dark *));
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-sans);
-  --font-mono: var(--font-geist-mono);
-  --font-heading: var(--font-sans);
-  --color-sidebar-ring: var(--sidebar-ring);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar: var(--sidebar);
-  --color-chart-5: var(--chart-5);
-  --color-chart-4: var(--chart-4);
-  --color-chart-3: var(--chart-3);
-  --color-chart-2: var(--chart-2);
-  --color-chart-1: var(--chart-1);
-  --color-ring: var(--ring);
-  --color-input: var(--input);
-  --color-border: var(--border);
-  --color-destructive: var(--destructive);
-  --color-accent-foreground: var(--accent-foreground);
-  --color-accent: var(--accent);
-  --color-muted-foreground: var(--muted-foreground);
-  --color-muted: var(--muted);
-  --color-secondary-foreground: var(--secondary-foreground);
-  --color-secondary: var(--secondary);
-  --color-primary-foreground: var(--primary-foreground);
-  --color-primary: var(--primary);
-  --color-popover-foreground: var(--popover-foreground);
-  --color-popover: var(--popover);
-  --color-card-foreground: var(--card-foreground);
-  --color-card: var(--card);
-  --radius-sm: calc(var(--radius) * 0.6);
-  --radius-md: calc(var(--radius) * 0.8);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) * 1.4);
-  --radius-2xl: calc(var(--radius) * 1.8);
-  --radius-3xl: calc(var(--radius) * 2.2);
-  --radius-4xl: calc(var(--radius) * 2.6);
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
-:root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
-  --radius: 0.625rem;
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100dvh;
+  overflow: hidden;
+  background: #020d17;
 }
 
-.dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+* {
+  box-sizing: border-box;
 }
 
-@layer base {
-  * {
-    @apply border-border outline-ring/50;
+::selection {
+  background: rgba(103, 232, 249, 0.25);
+}
+
+/* -----------------------------
+   AQUARIUM WATER BACKGROUND
+----------------------------- */
+
+.water-gradient {
+  overflow: hidden;
+  background:
+    radial-gradient(
+      circle at 50% -15%,
+      rgba(186, 230, 253, 0.22),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 12% 28%,
+      rgba(34, 211, 238, 0.14),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 88% 34%,
+      rgba(59, 130, 246, 0.17),
+      transparent 32%
+    ),
+    radial-gradient(circle at 50% 105%, rgba(8, 47, 73, 0.9), transparent 46%),
+    linear-gradient(180deg, #0a3854 0%, #05273c 20%, #031827 58%, #020c15 100%);
+}
+
+/* Moving light patterns reflected from the water surface. */
+.water-gradient::before {
+  content: "";
+  position: absolute;
+  inset: -25%;
+  opacity: 0.26;
+  background:
+    repeating-radial-gradient(
+      ellipse at 25% 15%,
+      transparent 0 20px,
+      rgba(165, 243, 252, 0.1) 22px 24px,
+      transparent 27px 55px
+    ),
+    repeating-radial-gradient(
+      ellipse at 75% 45%,
+      transparent 0 30px,
+      rgba(103, 232, 249, 0.07) 33px 35px,
+      transparent 39px 75px
+    );
+  filter: blur(1px);
+  mix-blend-mode: screen;
+  transform: rotate(-8deg) scale(1.2);
+  animation: causticDrift 16s ease-in-out infinite alternate;
+}
+
+/* Dark lower-water depth and a soft aquarium-floor glow. */
+.water-gradient::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      ellipse at 50% 110%,
+      rgba(34, 211, 238, 0.12),
+      transparent 24%
+    ),
+    linear-gradient(
+      180deg,
+      transparent 55%,
+      rgba(1, 12, 22, 0.2) 78%,
+      rgba(1, 9, 16, 0.7) 100%
+    );
+  pointer-events: none;
+}
+
+.water-light {
+  position: absolute;
+  left: -18%;
+  top: -42%;
+  width: 136%;
+  height: 125%;
+  opacity: 0.2;
+  transform-origin: 50% 0;
+  background:
+    linear-gradient(
+      112deg,
+      transparent 8%,
+      rgba(207, 250, 254, 0.34) 16%,
+      transparent 25%
+    ),
+    linear-gradient(
+      101deg,
+      transparent 30%,
+      rgba(103, 232, 249, 0.2) 41%,
+      transparent 52%
+    ),
+    linear-gradient(
+      82deg,
+      transparent 57%,
+      rgba(96, 165, 250, 0.16) 67%,
+      transparent 78%
+    );
+  filter: blur(24px);
+  mix-blend-mode: screen;
+  animation: waterMove 14s ease-in-out infinite alternate;
+}
+
+@keyframes waterMove {
+  from {
+    transform: translate3d(-4%, 0, 0) rotate(-3deg) scale(1.02);
   }
-  body {
-    @apply bg-background text-foreground;
+
+  to {
+    transform: translate3d(4%, 3%, 0) rotate(3deg) scale(1.08);
   }
+}
+
+@keyframes causticDrift {
+  from {
+    transform: translate3d(-3%, -2%, 0) rotate(-8deg) scale(1.2);
+  }
+
+  to {
+    transform: translate3d(4%, 4%, 0) rotate(-2deg) scale(1.28);
+  }
+}
+
+/* -----------------------------
+   BUBBLES
+----------------------------- */
+
+.bubble {
+  position: absolute;
+  bottom: -30px;
+  border: 1px solid rgba(207, 250, 254, 0.32);
+  border-radius: 999px;
+  background:
+    radial-gradient(
+      circle at 32% 28%,
+      rgba(255, 255, 255, 0.5),
+      transparent 18%
+    ),
+    rgba(255, 255, 255, 0.035);
+  box-shadow:
+    inset 0 0 7px rgba(255, 255, 255, 0.08),
+    0 0 13px rgba(34, 211, 238, 0.06);
+  animation: bubbleRise 9s linear infinite;
+}
+
+@keyframes bubbleRise {
+  0% {
+    transform: translate3d(0, 0, 0);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 0.7;
+  }
+
+  50% {
+    transform: translate3d(15px, -50vh, 0);
+  }
+
+  100% {
+    transform: translate3d(-20px, -110vh, 0);
+    opacity: 0;
+  }
+}
+
+/* -----------------------------
+   FISH
+----------------------------- */
+
+.fish {
+  position: absolute;
+  width: 105px;
+  height: 45px;
+  animation:
+    fishSwim 13s ease-in-out infinite,
+    fishFloat 4s ease-in-out infinite alternate;
+}
+
+.fish-body {
+  position: absolute;
+  left: 10px;
+  top: 5px;
+  width: 70px;
+  height: 38px;
+  border-radius: 60% 45% 45% 60%;
+  background:
+    radial-gradient(
+      circle at 30% 30%,
+      rgba(255, 255, 255, 0.3),
+      transparent 15%
+    ),
+    linear-gradient(135deg, rgba(103, 232, 249, 0.8), rgba(59, 130, 246, 0.4));
+  box-shadow:
+    0 0 30px rgba(34, 211, 238, 0.12),
+    inset 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.fish-eye {
+  position: absolute;
+  right: 10px;
+  top: 12px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
+}
+
+.fish-fin {
+  position: absolute;
+  left: 28px;
+  top: -11px;
+  width: 25px;
+  height: 20px;
+  border-radius: 100% 0 100% 0;
+  background: rgba(103, 232, 249, 0.25);
+  transform: rotate(15deg);
+}
+
+.fish-tail {
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 0;
+  height: 0;
+  border-top: 14px solid transparent;
+  border-bottom: 14px solid transparent;
+  border-right: 25px solid rgba(103, 232, 249, 0.5);
+}
+
+.fish-flipped {
+  transform: scaleX(-1);
+}
+
+@keyframes fishSwim {
+  0% {
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  25% {
+    transform: translate3d(35px, -15px, 0);
+  }
+
+  50% {
+    transform: translate3d(10px, 10px, 0);
+  }
+
+  75% {
+    transform: translate3d(-25px, -5px, 0);
+  }
+
+  100% {
+    transform: translate3d(-10px, 0, 0);
+  }
+}
+
+@keyframes fishFloat {
+  from {
+    margin-top: -4px;
+  }
+
+  to {
+    margin-top: 7px;
+  }
+}
+
+/* -----------------------------
+   GLASS
+----------------------------- */
+
+.aquarium-glass {
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.018) 40%,
+    rgba(34, 211, 238, 0.07)
+  );
+  box-shadow:
+    inset 0 1px rgba(255, 255, 255, 0.16),
+    inset 0 -20px 50px rgba(0, 0, 0, 0.25),
+    0 30px 100px rgba(0, 0, 0, 0.25),
+    0 0 80px rgba(34, 211, 238, 0.07);
+  backdrop-filter: blur(12px);
+}
+
+.aquarium-glass::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      115deg,
+      rgba(255, 255, 255, 0.14),
+      transparent 20%,
+      transparent 80%,
+      rgba(255, 255, 255, 0.04)
+    ),
+    radial-gradient(circle at 50% 5%, rgba(207, 250, 254, 0.1), transparent 30%);
+  pointer-events: none;
+}
+
+/* -----------------------------
+   LABELS
+----------------------------- */
+
+.section-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 10px;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: rgba(165, 243, 252, 0.55);
+}
+
+.section-label::before {
+  content: "";
+  display: block;
+  width: 28px;
+  height: 1px;
+  background: rgba(165, 243, 252, 0.45);
+  box-shadow: 0 0 8px rgba(103, 232, 249, 0.28);
+}
+
+/* -----------------------------
+   REDUCED MOTION
+----------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
   html {
-    @apply font-sans;
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* -----------------------------
+   SMALL SCREENS
+----------------------------- */
+
+@media (max-width: 640px) {
+  .fish {
+    width: 75px;
+    height: 35px;
+  }
+
+  .fish-body {
+    width: 52px;
+    height: 30px;
+  }
+
+  .fish-tail {
+    border-top-width: 11px;
+    border-bottom-width: 11px;
+    border-right-width: 20px;
+  }
+
+  .fish-fin {
+    left: 20px;
+    width: 20px;
+    height: 15px;
+  }
+
+  .fish-eye {
+    right: 7px;
+    top: 9px;
+    width: 5px;
+    height: 5px;
   }
 }
