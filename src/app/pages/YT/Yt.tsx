@@ -39,7 +39,7 @@ export default function ReaderVideo({ youtubeUrl }: ReaderVideoProps) {
     >
       <div className="mx-auto w-full">
         <div className="mx-auto max-w-3xl text-center">
-          <p className="section-label justify-center">06 / ЗОХИОЛЫН УНШЛАГА</p>
+          <p className="section-label justify-center">03 / ЗОХИОЛЫН УНШЛАГА</p>
 
           <h2 className="mt-5 text-5xl font-light tracking-tight sm:text-7xl">
             Аквариумын

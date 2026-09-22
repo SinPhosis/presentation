@@ -9,7 +9,7 @@ const Characters = () => {
       className="relative mx-auto min-h-full max-w-7xl px-5 py-28 lg:px-12"
     >
       <div className="mb-14">
-        <p className="section-label">04 / ДҮРҮҮД</p>
+        <p className="section-label">05 / ДҮРҮҮД</p>
 
         <h2 className="mt-5 text-5xl font-light sm:text-7xl">
           Дүрийн <span className="text-cyan-200/60">ертөнц.</span>

@@ -243,7 +243,7 @@ export default function App() {
             className="relative mx-auto min-h-full max-w-6xl px-5 py-28 lg:px-12"
           >
             <div className="mx-auto max-w-3xl text-center">
-              <p className="section-label justify-center">03 / ҮЙЛ ЯВДАЛ</p>
+              <p className="section-label justify-center">04 / ҮЙЛ ЯВДАЛ</p>
 
               <h2 className="mt-5 text-5xl font-light tracking-tight sm:text-7xl">
                 Аквариумын
@@ -318,16 +318,16 @@ export default function App() {
             </div>
           </section>
         </Slide>
-        <Slide label="4 of 6: Дүрүүд">
+        <Slide label="5 of 7: Дүрүүд">
           <Characters />
         </Slide>
-        <Slide label="5 of 6: Гол санаа">
+        <Slide label="6 of 7: Гол санаа">
           <section
             id="themes"
             className="relative mx-auto min-h-full max-w-7xl px-5 py-28 lg:px-12"
           >
             <div className="mb-14">
-              <p className="section-label">05 / ГОЛ САНАА</p>
+              <p className="section-label">06 / ГОЛ САНАА</p>
               <h2 className="mt-5 max-w-3xl text-5xl font-light sm:text-7xl">
                 Шилэн хананы
                 <br />
@@ -377,7 +377,7 @@ export default function App() {
             </div>
           </section>
         </Slide>
-        <Slide label="6 of 6: Дүгнэлт">
+        <Slide label="7 of 7: Дүгнэлт">
           <section
             id="ending"
             className="relative flex min-h-full items-center justify-center px-5 py-28"
@@ -393,7 +393,7 @@ export default function App() {
             />
 
             <div className="relative z-10 mx-auto max-w-4xl text-center">
-              <p className="section-label justify-center">06 / ДҮГНЭЛТ</p>
+              <p className="section-label justify-center">07 / ДҮГНЭЛТ</p>
               <h2 className="mt-7 text-6xl font-light leading-[0.95] tracking-tight sm:text-8xl">
                 Аквариумын
                 <br />
