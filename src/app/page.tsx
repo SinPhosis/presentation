@@ -5,6 +5,7 @@ import GlassCard from "./components/Glass_Card";
 import Header, { sections } from "./components/Header";
 import Author from "./pages/author/Author";
 import Characters from "./pages/characters/page";
+import ReaderVideo from "./pages/YT/Yt";
 
 function Bubble({
   left,
@@ -232,6 +233,9 @@ export default function App() {
         </Slide>
         <Slide label="2 of 6: Л. Өлзийтөгс">
           <Author />
+        </Slide>
+        <Slide label="3 of 7: Зохиолын уншлага">
+          <ReaderVideo youtubeUrl="https://www.youtube.com/watch?v=W8ivqHA0wfA" />
         </Slide>
         <Slide label="3 of 6: Үйл явдал">
           <section
